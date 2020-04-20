@@ -15,6 +15,7 @@ code_files:
 - {name: View/ViewController.storyboard, path: Code/View/view_controller.storyboard.liquid}
 
 # Presenter layer
+- {name: Presenter/ModuleOutput.swift, path: Code/Presenter/module_output.swift.liquid}
 - {name: Presenter/ModuleInput.swift, path: Code/Presenter/module_input.swift.liquid}
 - {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
 

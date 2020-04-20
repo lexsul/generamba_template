@@ -8,9 +8,18 @@
 
 import UIKit
 
-class {{ module_info.name }}ModuleConfigurator {
+@objc
+open class {{ module_info.name }}ModuleConfigurator: NSObject {
 
-    func configure() -> {{ module_info.name }}ViewController {
+    @objc
+    public static func presentModule(from view: UIViewController,
+                                     output: Any? = nil) {
+        let viewController = configure(output: output)
+        view.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    @objc
+    public static func configure(output: Any? = nil) -> {{ module_info.name }}ViewController {
        let bundle = Bundle(for: {{ module_info.name }}ViewController.self)
        guard let viewController = UIStoryboard(name: String(describing: {{ module_info.name }}ViewController.self),
                                      bundle: bundle).instantiateInitialViewController() as? {{ module_info.name }}ViewController else {
@@ -23,6 +32,7 @@ class {{ module_info.name }}ModuleConfigurator {
         let presenter = {{ module_info.name }}Presenter()
         presenter.view = viewController
         presenter.router = router
+        presenter.output = output as? {{ module_info.name }}ModuleOutput
 
         let interactor = {{ module_info.name }}Interactor()
         interactor.output = presenter
@@ -32,5 +42,4 @@ class {{ module_info.name }}ModuleConfigurator {
         
         return viewController
     }
-
 }

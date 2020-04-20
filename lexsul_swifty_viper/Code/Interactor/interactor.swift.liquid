@@ -6,7 +6,7 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-class {{ module_info.name }}Interactor: {{ module_info.name }}InteractorInput {
+class {{ module_info.name }}Interactor: NSObject {
 
     // MARK: - Public Properties
     
@@ -15,3 +15,11 @@ class {{ module_info.name }}Interactor: {{ module_info.name }}InteractorInput {
     // MARK: - {{ module_info.name }}InteractorInput
     
 }
+
+// MARK: - {{ module_info.name }}InteractorInput
+
+extension {{ module_info.name }}Interactor: {{ module_info.name }}InteractorInput {
+
+}
+
+

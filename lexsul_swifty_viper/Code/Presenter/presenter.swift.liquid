@@ -20,7 +20,8 @@ class {{ module_info.name }}Presenter: {{ module_info.name }}InteractorOutput {
 
 extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
 
-    func viewIsReady() {
+    func viewDidLoad() {
+    	view.setupInitialState()
     }
 
 }

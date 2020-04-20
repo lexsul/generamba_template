@@ -6,12 +6,18 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-class {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
+class {{ module_info.name }}Router {
 
     // MARK: - Public Properties
 
     weak var view: ModuleTransitionable?
-
-    // MARK: - TaskDetailRouterInput
     
 }
+
+// MARK: - {{ module_info.name }}RouterInput
+
+extension {{ module_info.name }}Router: {{ module_info.name }}RouterInput {
+
+}
+
+

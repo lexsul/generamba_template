@@ -8,7 +8,9 @@
 
 import UIKit
 
-class {{ module_info.name }}ViewController: UIViewController, ModuleTransitionable {
+open class {{ module_info.name }}ViewController: UIViewController, ModuleTransitionable {
+
+    // MARK: - IBOutlets
 
     // MARK: - Public Properties
 
@@ -18,8 +20,11 @@ class {{ module_info.name }}ViewController: UIViewController, ModuleTransitionab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.viewIsReady()
+        output.viewDidLoad()
     }
+
+    // MARK: - IBActions
+    
 }
 
 // MARK: {{module_info.name}}ViewInput
