@@ -2,7 +2,7 @@
 name: "lexsul_swifty_viper"
 summary: "Swift VIPER module."
 author: "Suleymanov Alexey"
-version: "0.1.2"
+version: "0.1.3"
 license: "MIT"
 
 # The declarations for code files
